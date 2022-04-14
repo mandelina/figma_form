@@ -1,0 +1,192 @@
+a {
+  text-decoration: none;
+}
+.wrapper {
+  position: absolute;
+  width: 520px;
+  border: 1px solid #c4c4c4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.wrapper .login {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding: 20px 0 18px 24px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.wrapper .login::after {
+  content: url("../icon/close.png");
+  float: right;
+  margin-right: 24px;
+  width: 18px;
+  height: 18px;
+}
+.txt-welcome {
+  display: flex;
+  justify-content: center;
+  margin: 26px 0 24px 0;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.input {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 472px;
+  height: 50px;
+  margin: 0 24px;
+  padding-left: 16px;
+}
+.input.pw {
+  margin-top: 10px;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox + .check_label {
+  display: inline-block;
+  cursor: pointer;
+  background: url("../icon/check-box.png") left/ 22px no-repeat;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 20px 28px;
+  padding-left: 30px;
+}
+
+.checkbox:checked + .check_label {
+  display: inline-block;
+  background: url("../icon/check-box2.png") left/22px no-repeat;
+}
+.btn_login {
+  padding: 14px 0;
+  margin-left: 24px;
+  border: 0px;
+  background: #2f80ed;
+  border-radius: 5px;
+  width: 472px;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.content-find {
+  /* padding: 0px 158px; */
+  margin: 20px 0px 30px 158px;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #767676;
+}
+.content-find .sign_up,
+.content-find .search_id {
+  color: #767676;
+}
+
+.content-find .sign_up::after {
+  content: "|";
+  display: inline-block;
+  /* width: 1px;
+              height: 18px; */
+  margin: 0px 12px;
+  color: #767676;
+}
+
+.wrapper .or-text {
+  display: block;
+  padding: 0px 24px;
+  text-align: center;
+  color: #767676;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.wrapper .or-text::after {
+  float: right;
+  content: "";
+  background-color: #767676;
+  width: 210px;
+  height: 1px;
+  margin: 8px 0px;
+}
+.wrapper .or-text::before {
+  float: left;
+  content: "";
+  background-color: #767676;
+  width: 210px;
+  height: 1px;
+  margin: 8px 0px;
+}
+.login_list {
+  margin: 20px 24px 25px;
+}
+.login_list li {
+  border: 1px solid #767676;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.login_list li a {
+  font-family: "Spoqa Han Sans Neo";
+  /* display: block; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #767676;
+}
+
+.login_list .google::before {
+  content: "";
+  background: url("../icon/Google__G__Logo\ 1.png");
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0 11px 12px;
+}
+.login_list .facebook::before {
+  content: "";
+  background: url("../icon/facebook.png");
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0 11px 12px;
+}
+.login_list .naver::before {
+  content: "";
+  background: url("../icon/naver-logo.png");
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0 11px 12px;
+}
+.login_list .kakao::before {
+  content: "";
+  background: url("../icon/message-circle.png");
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0 11px 12px;
+}

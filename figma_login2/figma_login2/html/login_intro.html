@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./reset.css" />
+  </head>
+  <style>
+    .login-wrapper {
+      box-sizing: border-box;
+      margin: 360px auto;
+      width: 500px;
+      border-radius: 5px;
+      border: 1px solid #c4c4c4;
+      background-color: #ffffff;
+    }
+    .blind {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+    }
+    .weniv-logo {
+      display: block;
+      margin: 0 auto;
+      margin-top: 38px;
+      text-align: center;
+    }
+    .text-login {
+      display: flex;
+      justify-content: center;
+      margin: 36px 0 32px 0;
+    }
+    .button {
+      display: block;
+      padding: 17px 0 15px 0;
+      margin: 0px 30px 30px 30px;
+      width: 440px;
+      background-color: #2f80ed;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+    }
+  </style>
+  <body>
+    <article class="login-wrapper">
+      <img class="weniv-logo" src="../icon/weniv-logo.png" alt="위니브" />
+      <h2 class="blind">위니브로그인</h2>
+      <p class="text-login">위니브를 더 즐겁고 편리하게 이용하세요.</p>
+      <a class="button" href="./login.html">로그인</a>
+    </article>
+  </body>
+</html>
