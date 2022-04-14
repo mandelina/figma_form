@@ -6,72 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="../css/reset.css" />
-    <style>
-      @import url("spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
-
-      a {
-        text-decoration: none;
-      }
-      .wrapper {
-        position: absolute;
-        width: 520px;
-        border: 1px solid #c4c4c4;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        box-sizing: border-box;
-        border-radius: 10px;
-      }
-      .wrapper .login {
-        font-family: "Spoqa Han Sans Neo";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        padding: 20px 0 18px 24px;
-        border-bottom: 1px solid #c4c4c4;
-      }
-      .wrapper .login::after {
-        content: url("../icon/close.png");
-        float: right;
-        margin-right: 24px;
-      }
-      .txt-welcome {
-        display: flex;
-        justify-content: center;
-        margin: 26px 0 24px 0;
-        font-family: "Spoqa Han Sans Neo";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-      }
-      .input {
-        border: 1px solid #c4c4c4;
-        box-sizing: border-box;
-        border-radius: 5px;
-        width: 472px;
-        height: 50px;
-        margin: 0 24px;
-        padding-left: 16px;
-      }
-      .input.pw {
-        margin-top: 10px;
-      }
-
-      .sign_up {
-      }
-      .content-find .sign_up::after {
-        content: " ";
-        display: block;
-        content: "";
-        width: 1px;
-        height: 12px;
-        margin: 0 4px;
-        background-color: #767676;
-      }
-    </style>
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
   </head>
   <body>
     <article class="wrapper">
@@ -79,19 +19,29 @@
       <p class="txt-welcome">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
       <input class="input id" type="text" placeholder="아이디" />
       <input class="input pw" type="password" placeholder="비밀번호" />
-      <div class="login-remian">
-        <img class="check-out" src="../icon/check-box.png" alt="" />
-        <p class="txt-remain">로그인 상태 유지</p>
-      </div>
+      <input class="checkbox" type="checkbox" id="check_remain" />
+      <label class="check_label" for="check_remain"> 로그인 상태 유지</label>
+      <button class="btn_login" type="submit">로그인</button>
       <div class="content-find">
         <a class="sign_up" href="#none">회원가입</a>
         <a class="search_id" href="#none">아이디/비밀번호 찾기</a>
       </div>
-      <ul class="login-list">
-        <li><a href="">구글 계정으로 로그인</a></li>
-        <li><a href="">페이스북 계정으로 로그인</a></li>
-        <li><a href="">네이버 계정으로 로그인</a></li>
-        <li><a href="">카카오톡 계정으로 로그인</a></li>
+      <span class="or-text">또는</span>
+      <ul class="login_list">
+        <li class="google">
+          <a href="https://www.google.co.kr">구글 계정으로 로그인</a>
+        </li>
+        <li class="facebook">
+          <a href="https://www.facebook.com">페이스북 계정으로 로그인</a>
+        </li>
+        <li class="naver">
+          <a href="https://www.naver.com/">네이버 계정으로 로그인</a>
+        </li>
+        <li class="kakao">
+          <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk"
+            >카카오톡 계정으로 로그인</a
+          >
+        </li>
       </ul>
     </article>
   </body>
