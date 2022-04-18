@@ -1,13 +1,65 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }
-.wrapper {
-  position: absolute;
-  width: 520px;
+
+/* 모달스타일  start*/
+
+.modal-login {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-login.on {
+  display: block;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.modal-login::before {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.modal-login .wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 30px auto;
+  background-color: #fff;
   border: 1px solid #c4c4c4;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+/* 모달스타일 end */
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid #c4c4c4;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -21,13 +73,14 @@ a {
   padding: 20px 0 18px 24px;
   border-bottom: 1px solid #c4c4c4;
 }
-.wrapper .login::after {
+
+/* .wrapper .login::after {
   content: url("../icon/close.png");
   float: right;
   margin-right: 24px;
   width: 18px;
   height: 18px;
-}
+} */
 .txt-welcome {
   display: flex;
   justify-content: center;
@@ -43,9 +96,8 @@ a {
   box-sizing: border-box;
   border-radius: 5px;
   width: 472px;
-  height: 50px;
   margin: 0 24px;
-  padding-left: 16px;
+  padding: 15px 16px;
   font-family: "Spoqa Han Sans Neo";
   font-style: normal;
   font-weight: 400;
@@ -54,6 +106,18 @@ a {
 }
 .input.pw {
   margin-top: 10px;
+}
+
+.inp-error {
+  /* display: none; */
+  display: block;
+  color: #f4492e;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 6px 0 0 28px;
 }
 
 .checkbox {
@@ -70,7 +134,7 @@ a {
   font-size: 16px;
   line-height: 24px;
   color: #767676;
-  margin: 16px 0 20px 28px;
+  margin: 16px 0 20px 24px;
   padding-left: 30px;
 }
 
@@ -78,6 +142,7 @@ a {
   display: inline-block;
   background: url("../icon/check-box2.png") left/22px no-repeat;
 }
+
 .btn_login {
   padding: 14px 0;
   margin-left: 24px;
@@ -103,18 +168,15 @@ a {
   line-height: 18px;
   color: #767676;
 }
-.content-find .sign_up,
-.content-find .search_id {
+.content-find .link-signup,
+.content-find .link-lost {
   color: #767676;
 }
 
-.content-find .sign_up::after {
-  content: "|";
+.content-find .link-signup::after {
   display: inline-block;
-  /* width: 1px;
-              height: 18px; */
-  margin: 0px 12px;
-  color: #767676;
+  content: "\007C";
+  margin: 0 8px 0 12px;
 }
 
 .wrapper .or-text {
@@ -148,21 +210,26 @@ a {
 .login_list {
   margin: 20px 24px 25px;
 }
-.login_list li {
+.login_list button {
+  display: block;
+  width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 15px 0px;
+  /* 수정 */
+  padding: 15px 12px;
   margin-bottom: 10px;
   text-align: center;
+  vertical-align: bottom;
+  text-decoration: none;
+  background-color: #ffffff;
 }
-.login_list li a {
+.login_list button a {
   color: #767676;
   font-family: "Spoqa Han Sans Neo";
-  /* display: block; */
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 .login_list .google {
@@ -184,7 +251,6 @@ a {
   float: left;
   width: 28px;
   height: 28px;
-  margin: -4px 0 11px 12px;
 }
 .login_list .facebook::before {
   content: "";
@@ -192,7 +258,6 @@ a {
   float: left;
   width: 28px;
   height: 28px;
-  margin: -4px 0 11px 12px;
 }
 .login_list .naver::before {
   content: "";
@@ -200,7 +265,6 @@ a {
   float: left;
   width: 28px;
   height: 28px;
-  margin: -4px 0 11px 12px;
 }
 .login_list .kakao::before {
   content: "";
@@ -208,5 +272,13 @@ a {
   float: left;
   width: 28px;
   height: 28px;
-  margin: -4px 0 11px 12px;
+}
+
+.btn-close {
+  border: 0;
+  position: absolute;
+  padding: 22px 24px;
+  top: 0;
+  right: 0;
+  background-color: transparent;
 }
