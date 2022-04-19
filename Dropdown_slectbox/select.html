@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최애 프로그래밍 언어</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <style>
+      /* 직접 셀렉트 박스 만들기 */
+      @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script&family=Gaegu&display=swap");
+
+      * {
+        font-family: "Roboto";
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .txt-ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .wrapper {
+        height: 300px;
+      }
+
+      .btn-select {
+        box-sizing: border-box;
+        display: block;
+        padding: 12px 14px;
+        width: 200px;
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        background: url("icon-Triangle-down.png") no-repeat 95% 50%;
+        text-align: left;
+        cursor: pointer;
+        /* 말줄임 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .btn-select:focus {
+        border: 1px solid #9b51e0;
+        outline: 3px solid #f8e4ff;
+        background: url("icon-Triangle-up.png") no-repeat 95% 50%;
+      }
+
+      .list-programing {
+        box-sizing: border-box;
+        display: none;
+        width: 200px;
+        padding: 8px 8px;
+      }
+
+      .list-programing.on {
+        box-sizing: border-box;
+        margin-top: 9px;
+        width: 200px;
+        display: block;
+        border: 1px solid #c4c4c4;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+      }
+
+      .btn-select.on + .list-programing {
+        display: block;
+      }
+
+      .list-programing li {
+        width: 184px;
+      }
+
+      .list-programing li button {
+        padding: 7px 0 7px 10px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .list-programing li button:hover,
+      .list-programing li button:focus {
+        background: #f8e4ff;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="wrapper">
+      <h2 class="txt-hide">최애 프로그래밍 언어</h2>
+      <button class="btn-select">최애 프로그래밍 언어</button>
+      <ul class="list-programing">
+        <li><button type="button" class="txt-ellipsis">Python</button></li>
+        <li><button type="button" class="txt-ellipsis">Java</button></li>
+        <li><button type="button" class="txt-ellipsis">JavaScript</button></li>
+        <li><button type="button" class="txt-ellipsis">C#</button></li>
+        <li><button type="button" class="txt-ellipsis">C/C++</button></li>
+      </ul>
+    </article>
+
+    <script>
+      const btn = document.querySelector(".btn-select");
+      const list = document.querySelector(".list-programing");
+      btn.addEventListener("click", () => {
+        list.classList.toggle("on");
+      });
+      list.addEventListener("click", (event) => {
+        if (event.target.nodeName === "BUTTON") {
+          btn.innerText = event.target.innerText;
+          list.classList.remove("on");
+        }
+      });
+    </script>
+  </body>
+</html>

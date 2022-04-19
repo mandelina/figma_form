@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown-selectbox</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script&family=Gaegu&display=swap");
+      select {
+        -webkit-appearance: none;
+
+        -moz-appearance: none;
+
+        appearance: none;
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+
+      /* .dropdown_box {
+        position: absolute;
+        width: 520px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        background-color: aquamarine;
+      } */
+      .select {
+        position: absolute;
+        background: url("icon-Triangle-down.png") no-repeat 87% 50%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 13px 14px;
+        width: 200px;
+        box-sizing: border-box;
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .select option {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 3px 0;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="dropdown_box"> -->
+    <select class="select" name="programming_lang">
+      <option selected disabled>최애 프로그래밍 언어</option>
+      <option value="Python">Python</option>
+      <option value="Java">Java</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="C#">C#</option>
+      <option value="C/C++">C/C++</option>
+    </select>
+    <!-- </div> -->
+  </body>
+</html>
