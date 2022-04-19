@@ -138,7 +138,26 @@ a {
   padding-left: 30px;
 }
 
+/* .checkbox + .check_label ::before {
+  display: inline-block;
+  cursor: pointer;
+  content: "";
+  width: 22px;
+  height: 22px;
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #767676;
+  background: url("../icon/check-box.png");
+  vertical-align: -5px;
+  float: left;
+} */
+
 .checkbox:checked + .check_label {
+  outline: 2px solid rgb(80, 80, 80);
+  outline-offset: 5px;
   display: inline-block;
   background: url("../icon/check-box2.png") left/22px no-repeat;
 }
@@ -232,46 +251,42 @@ a {
   line-height: 22px;
 }
 
-.login_list .google {
-  border: 1px solid #767676;
+/* 이미지 스프라이트 기법 */
+[class^="icon"]::before {
+  float: left;
+  display: block;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("../icon/css_sprites.png");
 }
-.login_list .facebook {
-  border: 1px solid #2d9cdb;
+.login_list .icon-google::before {
+  background-position: -58px -10px;
 }
-.login_list .naver {
-  border: 1px solid #00bf18;
+.login_list .icon-facebook::before {
+  content: "";
+  background-position: -10px -10px;
 }
-.login_list .kakao {
-  border: 1px solid #f2c94c;
+.login_list .icon-naver::before {
+  background-position: -58px -58px;
+}
+.login_list .icon-kakao::before {
+  background-position: -10px -58px;
 }
 
-.login_list .google::before {
-  content: "";
-  background: url("../icon/Google__G__Logo\ 1.png");
-  float: left;
-  width: 28px;
-  height: 28px;
+/* border에 색 */
+
+.login_list .icon-google {
+  border: 1px solid #767676;
 }
-.login_list .facebook::before {
-  content: "";
-  background: url("../icon/facebook.png");
-  float: left;
-  width: 28px;
-  height: 28px;
+.login_list .icon-facebook {
+  border: 1px solid #2d9cdb;
 }
-.login_list .naver::before {
-  content: "";
-  background: url("../icon/naver-logo.png");
-  float: left;
-  width: 28px;
-  height: 28px;
+.login_list .icon-naver {
+  border: 1px solid #00bf18;
 }
-.login_list .kakao::before {
-  content: "";
-  background: url("../icon/message-circle.png");
-  float: left;
-  width: 28px;
-  height: 28px;
+.login_list .icon-kakao {
+  border: 1px solid #f2c94c;
 }
 
 .btn-close {
